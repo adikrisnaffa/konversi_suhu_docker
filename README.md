@@ -4,3 +4,5 @@
 1. ganti nama file <code>.env.example</code> menjadi <code>.env</code> saja (tanpa .example)
 
 2. 
+
+3. 
