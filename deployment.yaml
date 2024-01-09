@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: konversi-suhu-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: konversi-suhu
+  template:
+    metadata:
+      labels:
+        app: konversi-suhu
+    spec:
+      containers:
+      - name: konversi-suhu
+        image: adikrisnanugraha/konversi_suhu:latest
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: "256Mi"   
+            cpu: "500m"       
+          requests:
+            memory: "128Mi"   
+            cpu: "250m"       
